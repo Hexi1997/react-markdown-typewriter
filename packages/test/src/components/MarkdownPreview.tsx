@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import "highlight.js/styles/github-dark.css"; // 选择一个高亮样式
-import Markdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -16,22 +16,12 @@ export function MarkdownPreview() {
             clearInterval(interval);
         };
     }, []);
-    const paragraphRef = useRef<HTMLDivElement>(null);
 
     return (
-        <div
-            ref={paragraphRef}
-            style={{
-                overflow: "auto",
-                height: "100vh",
-                width: "100vw",
-                position: "fixed",
-                top: `0`,
-            }}
-        >
-            <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeHighlight]}>
+        <div className='prose prose-lg max-w-none p-4 prose-pre:p-0 w-[calc(100vw-1rem)]'>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeHighlight]}>
                 {text.slice(0, index)}
-            </Markdown>
+            </ReactMarkdown>
         </div>
     );
 }
