@@ -1,55 +1,15 @@
 {
   "name": "react-markdown-typewriter",
-  "version": "1.0.1",
-  "description": "React Markdown component where Typewriter effect with motion has been added.",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "tsup"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:src": "pnpm --filter react-markdown-typewriter dev",
+    "dev:test": "pnpm --filter test dev",
+    "dev": "pnpm dev:src && pnpm dev:test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DRincs-Productions/react-markdown-typewriter.git"
-  },
-  "author": "DRincs-Productions",
-  "bugs": {
-    "url": "https://github.com/DRincs-Productions/react-markdown-typewriter/issues"
-  },
-  "homepage": "https://github.com/DRincs-Productions/react-markdown-typewriter",
-  "dependencies": {
-    "motion": "^12.4.3"
-  },
-  "devDependencies": {
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "html-tags": "^4.0.0",
-    "tsup": "^8.3.6",
-    "typescript": "^5.7.3"
-  },
-  "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0",
-    "react-markdown": ">=10.0.0"
-  },
-  "keywords": [
-    "ast",
-    "commonmark",
-    "component",
-    "gfm",
-    "markdown",
-    "react",
-    "react-component",
-    "remark",
-    "unified",
-    "javascript animation",
-    "react animation",
-    "animation",
-    "motion",
-    "framer",
-    "typewriter"
-  ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
